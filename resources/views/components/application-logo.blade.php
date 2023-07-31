@@ -1,0 +1,1 @@
+<img src="https://svgsilh.com/svg/606684.svg" {{ $attributes }}>
