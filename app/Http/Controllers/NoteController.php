@@ -24,9 +24,9 @@ class NoteController extends Controller
     {
         // $userId = Auth::id();
         // $notes = Note::where('user_id', $userId)->latest('updated_at')->paginate(2);
-        // $notes = Auth::user()->notes()->latest('updated_at')->paginate(2);
+        // $notes = [Auth::user()->notes()->latest('updated_at')->paginate(10), Auth::user()->name];
         $notes = [Note::whereBelongsTo(Auth::user())->latest('updated_at')->paginate(10), Auth::user()->name];
-        // $notes->each(function($note) {
+        // $notes[1]->each(function($note) {
         //     dump($note->blog_title);
         // });
 

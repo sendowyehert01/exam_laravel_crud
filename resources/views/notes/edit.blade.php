@@ -17,7 +17,7 @@
 
                             <x-primary-button class="mt-6"> Save Note </x-primary-button>
                         </form>
-                    </div>=
+                    </div>
         </div>  
     </div>
 </x-app-layout>

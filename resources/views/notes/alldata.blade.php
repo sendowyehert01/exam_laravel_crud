@@ -44,7 +44,7 @@
                 <div class="relative overflow-x-auto sm:rounded-lg">
                     <div class="mb-5 text-right">
                         <h1 class="text-black text-4xl font-mono text-center">Bulletin Board</h1>
-                        <p class="text-lg font-mono"> Posts: {{ $allnotes[0]->count() }} </p>
+                        <p class="text-lg font-mono"> Posts: {{ $allnotes[0]->total() }} </p>
                         <p class="text-lg font-mono"> Registered Users: {{ $allnotes[1]->count() }} </p>
                         <p class="text-lg font-mono"> Date Today: {{ $allnotes[2]->format('F j Y - l') }} </p>
                     </div>
@@ -79,7 +79,7 @@
                                     "{{ $note->blog_title }}"
                                 </td>
                                 <td class="px-6 py-2">
-                                    {{ $note->blog_writer }}
+                                    {{ $allnotes[1][$note->user_id-1]->name  }}
                                 </td>
                                 <td class="px-6 py-2">
                                     {{ $note->created_at }}
